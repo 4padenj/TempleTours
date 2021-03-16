@@ -25,6 +25,8 @@ namespace TempleTours
             {
                 options.UseSqlServer($"Server=database-1.ccelvmiio16h.us-east-1.rds.amazonaws.com;Database=templetoursdb;User Id=admin;Password=group19group");
             });
+            //for debugging i think
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
