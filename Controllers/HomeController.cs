@@ -18,8 +18,39 @@ namespace TempleTours.Controllers
             _logger = logger;
         }
 
+        //Index Action - no models needed?
         public IActionResult Index()
         {
+            return View();
+        }
+
+        //Sign Up GET Action
+        [HttpGet("SignUp")]
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+
+        //Sign Up POST Action 
+        [HttpPost("SignUp")]
+        public IActionResult SignUp(TourSlot tourSlot)
+        {
+            //model validation
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            else
+            {
+                //TODO: add 
+                return View();
+            }
+        }
+
+        //View Appointments Action
+        public IActionResult ViewAppointments()
+        {
+            //TODO: What model belongs here?
             return View();
         }
 
