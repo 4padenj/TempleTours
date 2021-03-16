@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace TempleTours.Models
 {
-    public class ReservationsContext:DbContext
+    public class ReservationsDbContext:DbContext
     {
-        public ReservationsContext(DbContextOptions<ReservationsContext> options): base(options)
+        public ReservationsDbContext(DbContextOptions<ReservationsDbContext> options): base(options)
         {
 
         }
         public DbSet<TourSlot> TourSlots { get; set; }
+        
         public DbSet<Reservation> Reservations { get; set; }
+        // public DbSet<Time> Times { get; set; }
     }
 }

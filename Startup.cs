@@ -21,7 +21,7 @@ namespace TempleTours
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ReservationsContext>(options =>
+            services.AddDbContext<ReservationsDbContext>(options =>
             {
                 options.UseSqlServer($"Server=database-1.ccelvmiio16h.us-east-1.rds.amazonaws.com;Database=templetoursdb;User Id=admin;Password=group19group");
             });
@@ -53,6 +53,9 @@ namespace TempleTours
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            // Calls the seed data
+            SeedData.EnsurePopulated(app);
         }
     }
 }
