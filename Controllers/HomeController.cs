@@ -42,15 +42,16 @@ namespace TempleTours.Controllers
             }
             else
             {
-                //TODO: add 
-                return View();
+                //TODO: add reservation to list
+                ///redirect to homepage
+                return View("Index");
             }
         }
 
         //View Appointments Action
         public IActionResult ViewAppointments()
-        {
-            //TODO: What model belongs here?
+        {       
+            //possible list model
             return View();
         }
 
