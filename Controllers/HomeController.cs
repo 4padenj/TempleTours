@@ -28,7 +28,7 @@ namespace TempleTours.Controllers
         }
 
         
-        public IActionResult ReservationInfo()
+        public IActionResult SignUp()
         {
             return View(new DayOfWeekViewModel 
             {
@@ -56,14 +56,14 @@ namespace TempleTours.Controllers
 
 
         [HttpGet("SignUp")]
-        public IActionResult SignUp()
+        public IActionResult ReservationInfo()
         {
             return View();
         }
 
         //Sign Up POST Action 
         [HttpPost("SignUp")]
-        public IActionResult SignUp(TourSlot tourSlot)
+        public IActionResult ReservationInfo(TourSlot tourSlot)
         {
             //model validation
             if (ModelState.IsValid)
