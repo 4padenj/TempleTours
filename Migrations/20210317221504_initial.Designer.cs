@@ -10,7 +10,7 @@ using TempleTours.Models;
 namespace TempleTours.Migrations
 {
     [DbContext(typeof(ReservationsDbContext))]
-    [Migration("20210316225506_initial")]
+    [Migration("20210317221504_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,17 +62,8 @@ namespace TempleTours.Migrations
                     b.Property<bool>("Available")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DayOfWeek")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("TimeInfo")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("TourSlotID");
 
