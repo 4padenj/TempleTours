@@ -3,8 +3,21 @@
 *@
 @{
 }
-
+@model DayOfWeekViewModel
 <div class="text-center">
-    <h1 class="display-4">Sign Up</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Available Times</h1>
+
+    <div>
+        <div>
+            <h3>Monday</h3>
+
+            @foreach (var x in Model.Monday)
+            {
+                <div>
+                    <p>@x.Time</p>
+                </div>
+            }
+        </div>   
+    </div>
+    
 </div>
