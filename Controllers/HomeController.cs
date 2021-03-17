@@ -30,27 +30,29 @@ namespace TempleTours.Controllers
         
         public IActionResult ReservationInfo()
         {
-            return View(new DayOfWeekViewModel 
-            {
-                Monday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Monday" && x.Available == true).OrderBy(day => day.Time),
+            return View(
+            //    new DayOfWeekViewModel 
+            //{
+            //    //Monday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Monday" && x.Available == true).OrderBy(day => day.Time),
 
-                Tuesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Tuesday" && x.Available == true).OrderBy(day => day.Time),
+            //    //Tuesday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Tuesday" && x.Available == true).OrderBy(day => day.Time),
 
-                Wednesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Wednesday" && x.Available == true).OrderBy(day => day.Time),
+            //    //Wednesday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Wednesday" && x.Available == true).OrderBy(day => day.Time),
 
-                Thursday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Thursday" && x.Available == true).OrderBy(day => day.Time),
+            //    //Thursday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Thursday" && x.Available == true).OrderBy(day => day.Time),
 
-                Friday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Friday" && x.Available == true).OrderBy(day => day.Time),
+            //    //Friday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Friday" && x.Available == true).OrderBy(day => day.Time),
 
-                Saturday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Saturday" && x.Available == true).OrderBy(day => day.Time)
+            //    //Saturday = Context.TourSlots
+            //    //    .Where(x => x.DayOfWeek == "Saturday" && x.Available == true).OrderBy(day => day.Time)
 
-            });
+            //}
+                );
         
         }
 

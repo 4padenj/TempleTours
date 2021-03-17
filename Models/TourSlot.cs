@@ -11,18 +11,20 @@ namespace TempleTours.Models
         [Key]
         [Required]
         public int TourSlotID { get; set; }
-        [Required]
-        public string Date { get; set; }
-        [Required]
-        public string DayOfWeek { get; set; }
-        [Required]
+        // [Required]
+        //public string Date { get; set; }
+        //[Required]
+        //public string DayOfWeek { get; set; }
+        //[Required]
 
-        //suggestion:
-        //[DataType(DataType.Time)]
-        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
-        //maybe this way we can get the datatype to be time so they'll order properly?
+        ////suggestion:
+        ////[DataType(DataType.Time)]
+        ////[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        ////maybe this way we can get the datatype to be time so they'll order properly?
 
-        public string Time { get; set; }
+        //public string Time { get; set; }
+        [Required]
+        public DateTime TimeInfo { get; set; }
         [Required]
         public bool Available { get; set; } = true;
         

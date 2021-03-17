@@ -26,476 +26,321 @@ namespace TempleTours.Models
                     // Seed for Monday
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 22, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 22, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 22, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 22, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Monday",
-                            Date = "3/22",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 22, 20, 0, 0)
                         },
-                        //TUESDAY
+                        // TUESDAY 3/23
+
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 23, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 23, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 23, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 23, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Tuesday",
-                            Date = "3/23",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 23, 20, 0, 0)
                         },
-                        //WEDNESDAY
+                        // Wednesday
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 24, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 24, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 24, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 24, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Wednesday",
-                            Date = "3/24",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 24, 20, 0, 0)
                         },
-                        //THURSDAY
+                        // Thursday
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 25, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 25, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 25, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 25, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Thursday",
-                            Date = "3/25",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 25, 20, 0, 0)
                         },
-                        //FRIDAY
+                        // Friday
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 26, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 26, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 26, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 26, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Friday",
-                            Date = "3/26",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 26, 20, 0, 0)
                         },
-                        //SATURDAY
+                        // Saturday
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "8:00am"
+                            TimeInfo = new DateTime(2021, 3, 27, 8, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "9:00am"
+                            TimeInfo = new DateTime(2021, 3, 27, 9, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "10:00am"
+                            TimeInfo = new DateTime(2021, 3, 27, 10, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "11:00am"
+                            TimeInfo = new DateTime(2021, 3, 27, 11, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "12:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 12, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "1:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 13, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "2:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 14, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "3:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 15, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "4:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 16, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "5:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 17, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "6:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 18, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "7:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 19, 0, 0)
                         },
                         new TourSlot
                         {
-                            DayOfWeek = "Saturday",
-                            Date = "3/27",
-                            Time = "8:00pm"
+                            TimeInfo = new DateTime(2021, 3, 27, 20, 0, 0)
                         }
                 );
                 context.SaveChanges();
