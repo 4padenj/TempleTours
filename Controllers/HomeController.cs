@@ -30,28 +30,27 @@ namespace TempleTours.Controllers
         [HttpGet("SignUp")]
         public IActionResult SignUp()
         {
-            return View();
-            /*return View(new DayOfWeekViewModel 
+            return View(new DayOfWeekViewModel 
             {
                 Monday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Monday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Monday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Tuesday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Tuesday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Wednesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Wednesday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Thursday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Thursday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Thursday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Friday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Friday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Friday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Saturday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Saturday" && x.Available == true).OrderBy(day => day.Time)
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Saturday" && x.Available == true).OrderBy(day => day.TimeInfo)
 
-            });*/
+            });
         
         }
 
@@ -92,29 +91,27 @@ namespace TempleTours.Controllers
         public IActionResult ViewAppointments()
         {
             //pass in reservations
-            return View();
-            /*
             return View(new DayOfWeekViewModel
             {
                 Monday = Context.TourSlots
-                    .Where(x => x.TimeInfo == "Monday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Monday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Tuesday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Tuesday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Wednesday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Wednesday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Thursday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Thursday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Thursday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Friday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Friday" && x.Available == true).OrderBy(day => day.Time),
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Friday" && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Saturday = Context.TourSlots
-                    .Where(x => x.DayOfWeek == "Saturday" && x.Available == true).OrderBy(day => day.Time)
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Saturday" && x.Available == true).OrderBy(day => day.TimeInfo)
 
-            });*/
+            });
         }
 
         public IActionResult Privacy()
