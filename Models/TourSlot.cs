@@ -16,6 +16,12 @@ namespace TempleTours.Models
         [Required]
         public string DayOfWeek { get; set; }
         [Required]
+
+        //suggestion:
+        //[DataType(DataType.Time)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:HH:mm}")]
+        //maybe this way we can get the datatype to be time so they'll order properly?
+
         public string Time { get; set; }
         [Required]
         public bool Available { get; set; } = true;
