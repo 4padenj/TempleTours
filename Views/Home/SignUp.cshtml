@@ -7,17 +7,67 @@
 <div class="text-center">
     <h1 class="display-4">Available Times</h1>
 
-    <div>
+    <div class="row">
         <div>
             <h3>Monday</h3>
 
             @foreach (var x in Model.Monday)
             {
                 <div>
-                    <p><a asp-action="">@x.Time</a></p>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
                 </div>
             }
-        </div>   
+        </div>
+        <div>
+            <h3>Tuesday</h3>
+
+            @foreach (var x in Model.Tuesday)
+            {
+                <div>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
+                </div>
+            }
+        </div>
+        <div>
+            <h3>Wednesday</h3>
+
+            @foreach (var x in Model.Wednesday)
+            {
+                <div>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
+                </div>
+            }
+        </div>
+        <div>
+            <h3>Thursday</h3>
+
+            @foreach (var x in Model.Thursday)
+            {
+                <div>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
+                </div>
+            }
+        </div>
+        <div>
+            <h3>Friday</h3>
+
+            @foreach (var x in Model.Friday)
+            {
+                <div>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
+                </div>
+            }
+        </div>
+        <div>
+            <h3>Saturday</h3>
+
+            @foreach (var x in Model.Saturday)
+            {
+                <div>
+                    <p><a asp-action="ReservationInfo">@x.Time</a></p>
+                </div>
+            }
+        </div>
     </div>
     
 </div>
