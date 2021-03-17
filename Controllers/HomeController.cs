@@ -59,23 +59,24 @@ namespace TempleTours.Controllers
         public IActionResult SignUp(TourSlot tourSlot)
         {
             //model validation
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View();
+                //update DB & redirect to View Appointments
+                Context.TourSlots.Add(tourSlot);
+                Context.SaveChanges();
+                return View("ViewAppointments");
             }
             else
             {
-                //TODO: add reservation to list
-                ///redirect to homepage
-                return View("Index");
+                return View();
             }
         }
 
         //View Appointments Action
         public IActionResult ViewAppointments()
         {       
-            //possible list model
-            return View();
+            //pass in reservations
+            return View(Context.Reservations);
         }
 
         public IActionResult Privacy()
