@@ -14,7 +14,7 @@ namespace TempleTours.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private ReservationsDbContext Context;
-        
+
         public HomeController(ILogger<HomeController> logger, ReservationsDbContext con)
         {
             _logger = logger;
@@ -33,10 +33,10 @@ namespace TempleTours.Controllers
             return View(new DayOfWeekViewModel 
             {
                 Monday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Monday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 1 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Tuesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.DayOfWeek == DayOfWeek.Tuesday && x.Available == true).OrderBy(day => day.TimeInfo),
 
                 Wednesday = Context.TourSlots
                     .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),

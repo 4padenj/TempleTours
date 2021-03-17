@@ -7,11 +7,11 @@ namespace TempleTours.Models.ViewModels
 {
     public class DayOfWeekViewModel
     {
-        public IEnumerable<TourSlot> Monday { get; set; }
-        public IEnumerable<TourSlot> Tuesday { get; set; }
-        public IEnumerable<TourSlot> Wednesday { get; set; }
-        public IEnumerable<TourSlot> Thursday { get; set; }
-        public IEnumerable<TourSlot> Friday { get; set; }
-        public IEnumerable<TourSlot> Saturday { get; set; }
+        public IQueryable<TourSlot> Monday { get; set; }
+        public IQueryable<TourSlot> Tuesday { get; set; }
+        public IQueryable<TourSlot> Wednesday { get; set; }
+        public IQueryable<TourSlot> Thursday { get; set; }
+        public IQueryable<TourSlot> Friday { get; set; }
+        public IQueryable<TourSlot> Saturday { get; set; }
     }
 }
