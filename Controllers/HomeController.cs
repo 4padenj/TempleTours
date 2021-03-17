@@ -57,7 +57,8 @@ namespace TempleTours.Controllers
         [HttpPost("SignUp")]
         public IActionResult SignUp(TourSlot tourslot)
         {
-            return View("ReservationInfo");
+            TourSlot slot = tourslot;
+            return View("ReservationInfo", slot);
         }
 
 
@@ -94,22 +95,22 @@ namespace TempleTours.Controllers
             return View(new DayOfWeekViewModel
             {
                 Monday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 22 && x.Available == true).OrderBy(x => x.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 22 && x.Available == false).OrderBy(x => x.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 23 && x.Available == true).OrderBy(x => x.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 23 && x.Available == false).OrderBy(x => x.TimeInfo),
 
                 Wednesday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 24 && x.Available == true).OrderBy(x => x.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 24 && x.Available == false).OrderBy(x => x.TimeInfo),
 
                 Thursday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 25 && x.Available == true).OrderBy(x => x.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 25 && x.Available == false).OrderBy(x => x.TimeInfo),
 
                 Friday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 26 && x.Available == true).OrderBy(x => x.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 26 && x.Available == false).OrderBy(x => x.TimeInfo),
 
                 Saturday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 27 && x.Available == true).OrderBy(x => x.TimeInfo)
+                     .Where(x => x.TimeInfo.Day == 27 && x.Available == false).OrderBy(x => x.TimeInfo)
 
             });
         }
