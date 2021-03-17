@@ -33,22 +33,22 @@ namespace TempleTours.Controllers
             return View(new DayOfWeekViewModel 
             {
                 Monday = Context.TourSlots
-                    .Where(x => x.TimeInfo.Day == 1 && x.Available == true).OrderBy(x => x.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 22 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek == DayOfWeek.Tuesday && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 23 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Wednesday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 24 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Thursday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Thursday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 25 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Friday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Friday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                    .Where(x => x.TimeInfo.Day == 26 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Saturday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Saturday" && x.Available == true).OrderBy(day => day.TimeInfo)
+                    .Where(x => x.TimeInfo.Day == 27 && x.Available == true).OrderBy(x => x.TimeInfo)
 
             });
         
@@ -94,22 +94,22 @@ namespace TempleTours.Controllers
             return View(new DayOfWeekViewModel
             {
                 Monday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Monday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 22 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Tuesday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Tuesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 23 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Wednesday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 24 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Thursday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Thursday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 25 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Friday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Friday" && x.Available == true).OrderBy(day => day.TimeInfo),
+                     .Where(x => x.TimeInfo.Day == 26 && x.Available == true).OrderBy(x => x.TimeInfo),
 
                 Saturday = Context.TourSlots
-                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Saturday" && x.Available == true).OrderBy(day => day.TimeInfo)
+                     .Where(x => x.TimeInfo.Day == 27 && x.Available == true).OrderBy(x => x.TimeInfo)
 
             });
         }
