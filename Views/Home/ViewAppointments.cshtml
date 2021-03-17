@@ -1,6 +1,7 @@
 ﻿@{
 }
 @model DayOfWeekViewModel
+
 <div class="text-center">
     <h1 class="display-4">Scheduled Appointments</h1>
 </div>
@@ -44,9 +45,10 @@
                 <small class="col d-sm-none text-center text-muted">Monday</small>
                 <span class="col-1"></span>
             </h5>
+
             @foreach (var x in Model.Monday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+        <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
             }
         </div>
         <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -57,7 +59,7 @@
             </h5>
             @foreach (var x in Model.Tuesday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
                 <!--if (x.Time.DayOfWeek == "Tuesday")
                 {
                 }-->
@@ -71,7 +73,7 @@
             </h5>
             @foreach (var x in Model.Wednesday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+        <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
             }
         </div>
         <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate bg-muted" style="height:500px">
@@ -82,7 +84,7 @@
             </h5>
             @foreach (var x in Model.Thursday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+        <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
             }
         </div>
         <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate bg-muted" style="height:500px">
@@ -93,7 +95,7 @@
             </h5>
             @foreach (var x in Model.Friday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+        <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
             }
         </div>
         <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate bg-muted" style="height:500px">
@@ -104,8 +106,36 @@
             </h5>
             @foreach (var x in Model.Saturday)
             {
-                <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo</p>
+        <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
             }
         </div>
     </div>
 </div>
+
+<!--
+
+            public IActionResult ViewAppointments()
+        {
+            //pass in reservations
+            return View(new DayOfWeekViewModel
+            {
+                Monday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Monday" && x.Available == true).OrderBy(day => day.TimeInfo),
+
+                Tuesday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Tuesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+
+                Wednesday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Wednesday" && x.Available == true).OrderBy(day => day.TimeInfo),
+
+                Thursday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Thursday" && x.Available == true).OrderBy(day => day.TimeInfo),
+
+                Friday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Friday" && x.Available == true).OrderBy(day => day.TimeInfo),
+
+                Saturday = Context.TourSlots
+                    .Where(x => x.TimeInfo.DayOfWeek.ToString() == "Saturday" && x.Available == true).OrderBy(day => day.TimeInfo)
+            });
+        }
+-->
