@@ -27,9 +27,8 @@ namespace TempleTours.Controllers
             return View();
         }
 
-        //Sign Up GET Action
-        [HttpGet("SignUp")]
-        public IActionResult SignUp()
+        
+        public IActionResult ReservationInfo()
         {
             return View(new DayOfWeekViewModel 
             {
@@ -52,6 +51,14 @@ namespace TempleTours.Controllers
                     .Where(x => x.DayOfWeek == "Saturday" && x.Available == true).OrderBy(day => day.Time)
 
             });
+        
+        }
+
+
+        [HttpGet("SignUp")]
+        public IActionResult SignUp()
+        {
+            return View();
         }
 
         //Sign Up POST Action 
@@ -71,6 +78,8 @@ namespace TempleTours.Controllers
                 return View();
             }
         }
+
+
 
         //View Appointments Action
         public IActionResult ViewAppointments()
