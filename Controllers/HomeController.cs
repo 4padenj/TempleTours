@@ -14,7 +14,7 @@ namespace TempleTours.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private ReservationsDbContext Context;
-
+        public int savedID;
         public HomeController(ILogger<HomeController> logger, ReservationsDbContext con)
         {
             _logger = logger;
@@ -57,15 +57,13 @@ namespace TempleTours.Controllers
         [HttpPost("SignUp")]
         public IActionResult SignUp(TourSlot tourslot)
         {
-            TourSlot slot = tourslot;
-            //TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == tourslotID);
+             savedID = tourslot.TourSlotID;
+
+            TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == savedID);
             // Update the slot to be available = false
             // Set ViewData = slot
             //ViewData["tourslot"] = slot;
-            return View("ReservationInfo", new ReservationFormViewModel
-            {
-                Tour = slot
-            }) ;
+            return View("ReservationInfo");
         }
 
 
@@ -85,6 +83,7 @@ namespace TempleTours.Controllers
                 //update DB & redirect to View Appointments
                 Context.Reservations.Add(reservation);
                 Context.SaveChanges();
+                Console.WriteLine(savedID);
                 return View("ViewAppointments");
             }
             else
