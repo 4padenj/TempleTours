@@ -58,7 +58,9 @@ namespace TempleTours.Controllers
         public IActionResult SignUp(TourSlot tourslot)
         {
             TourSlot slot = tourslot;
-            return View("ReservationInfo", slot);
+            // Update the slot to be available = false
+            // Set ViewData = slot
+            return RedirectToAction("ReservationInfo", slot);
         }
 
 
