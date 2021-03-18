@@ -62,7 +62,10 @@ namespace TempleTours.Controllers
             savedTime = tourslot.TimeInfo;
             ViewBag.Time = savedTime;
 
-            TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == savedID);
+            
+
+            Context.TourSlots.First(x => x.TourSlotID == savedID).Available = false;
+            Context.SaveChanges();
             // Update the slot to be available = false
             // Set ViewData = slot
             //ViewData["tourslot"] = slot;
@@ -84,10 +87,11 @@ namespace TempleTours.Controllers
             if (ModelState.IsValid)
             {
                 //update DB & redirect to View Appointments
+                
                 Context.Reservations.Add(reservation);
                 Context.SaveChanges();
                 Console.WriteLine(savedID);
-                return View("ViewAppointments");
+                return View("Index");
             }
             else
             {

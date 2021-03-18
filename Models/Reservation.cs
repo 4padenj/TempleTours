@@ -21,6 +21,8 @@ namespace TempleTours.Models
         [Required]
         public DateTime Time { get; set; }
 
+       
+
         
 
     }

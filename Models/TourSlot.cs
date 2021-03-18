@@ -16,7 +16,12 @@ namespace TempleTours.Models
         public DateTime TimeInfo { get; set; }
         [Required]
         public bool Available { get; set; } = true;
-        
+
+        public void UpdateAvailablity()
+        {
+            Available = false;
+        }
+
     }
 
     
