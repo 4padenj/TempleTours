@@ -1,6 +1,6 @@
 ﻿@{
 }
-@model DayOfWeekViewModel
+@model ViewAppointmentsViewModel
 
 <!--This page displays all the times in our database that have been reserved. For confidentiality reasons
     You cannot see the name of the group for the corresponding times-->
@@ -36,10 +36,10 @@
                     <span class="col-1"></span>
                 </h5>
                 <!-- For each instance of timeslat in the specific day of the week (i.e. Monday)
-                    category with an availability equal to false display it! This means that the time has been taken-->
+        category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Monday)
                 {
-            <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)">@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
             <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -52,7 +52,7 @@
     category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Tuesday)
                 {
-                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)">@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
             <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -65,7 +65,7 @@
     category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Wednesday)
                 {
-                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)">@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
             <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -78,7 +78,7 @@
     category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Thursday)
                 {
-                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)">@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
             <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -91,7 +91,7 @@
     category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Friday)
                 {
-                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)">@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
             <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate d-none d-sm-inline-block bg-light text-muted" style="height:500px">
@@ -104,7 +104,7 @@
     category with an availability equal to false display it! This means that the time has been taken-->
                 @foreach (var x in Model.Saturday)
                 {
-                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Test Event 1">@x.TimeInfo.Hour.ToString():00</p>
+                    <p class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="@(x.ContactPhone == null ? x.ContactEmail : x.ContactPhone)"  >@x.Time.Hour.ToString():00 - @x.GroupName: @x.GroupSize</p>
                 }
             </div>
         </div>
