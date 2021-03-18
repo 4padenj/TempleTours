@@ -15,6 +15,7 @@ namespace TempleTours.Controllers
         private readonly ILogger<HomeController> _logger;
         private ReservationsDbContext Context;
         public int savedID;
+        public DateTime savedTime;
         public HomeController(ILogger<HomeController> logger, ReservationsDbContext con)
         {
             _logger = logger;
@@ -58,6 +59,8 @@ namespace TempleTours.Controllers
         public IActionResult SignUp(TourSlot tourslot)
         {
              savedID = tourslot.TourSlotID;
+            savedTime = tourslot.TimeInfo;
+            ViewBag.Time = savedTime;
 
             TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == savedID);
             // Update the slot to be available = false

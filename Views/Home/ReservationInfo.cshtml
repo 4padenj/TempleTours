@@ -3,27 +3,27 @@
 *@
 @{ 
 }
-@model ReservationFormViewModel
+@model Reservation
 
 
 <div>
     <form asp-action="ReservationInfo" method="post">
-        <label asp-for="@Model.Reservation.GroupName">Group Name:</label>
-        <input asp-for="@Model.Reservation.GroupName" />
+        <label asp-for="GroupName">Group Name:</label>
+        <input asp-for="GroupName" />
         <br />
 
-        <label asp-for="@Model.Reservation.GroupSize">Group Size:</label>
-        <input asp-for="@Model.Reservation.GroupSize" />
+        <label asp-for="GroupSize">Group Size:</label>
+        <input asp-for="GroupSize" />
         <br />
 
-        <label asp-for="@Model.Reservation.ContactEmail">Email Address:</label>
-        <input asp-for="@Model.Reservation.ContactEmail" />
+        <label asp-for="ContactEmail">Email Address:</label>
+        <input asp-for="ContactEmail" />
         <br />
 
-        <label asp-for="@Model.Reservation.ContactPhone">Phone Number:</label>
-        <input asp-for="@Model.Reservation.ContactPhone" />
+        <label asp-for="ContactPhone">Phone Number:</label>
+        <input asp-for="ContactPhone" />
 
-        <input type="hidden" asp-for="@Model.Reservation.Time" value="@Model.Tour"/>
+        <input type="hidden" asp-for="Time" value="@ViewBag.Time"/>
 
         <button type="submit">Book Appointment</button>
 

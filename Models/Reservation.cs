@@ -19,7 +19,7 @@ namespace TempleTours.Models
         public string ContactEmail { get; set; }
         public string ContactPhone { get; set; }
         [Required]
-        public TourSlot Time { get; set; }
+        public DateTime Time { get; set; }
 
         
 

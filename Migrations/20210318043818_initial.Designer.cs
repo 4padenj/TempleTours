@@ -10,7 +10,7 @@ using TempleTours.Models;
 namespace TempleTours.Migrations
 {
     [DbContext(typeof(ReservationsDbContext))]
-    [Migration("20210317221504_initial")]
+    [Migration("20210318043818_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,12 +42,10 @@ namespace TempleTours.Migrations
                     b.Property<int>("GroupSize")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TimeTourSlotID")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ReservationID");
-
-                    b.HasIndex("TimeTourSlotID");
 
                     b.ToTable("Reservations");
                 });
@@ -68,15 +66,6 @@ namespace TempleTours.Migrations
                     b.HasKey("TourSlotID");
 
                     b.ToTable("TourSlots");
-                });
-
-            modelBuilder.Entity("TempleTours.Models.Reservation", b =>
-                {
-                    b.HasOne("TempleTours.Models.TourSlot", "Time")
-                        .WithMany()
-                        .HasForeignKey("TimeTourSlotID");
-
-                    b.Navigation("Time");
                 });
 #pragma warning restore 612, 618
         }
