@@ -15,7 +15,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                     <form id="@x.TourSlotID" asp-action="SignUp" method="post">
                         <input type="hidden" asp-for="@x" />
@@ -38,7 +38,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                     <form id="@x.TourSlotID" asp-action="/ReservationInfo" method="post">
                         <input type="hidden" asp-for="@x.TourSlotID" />
@@ -61,7 +61,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                     <form id="@x.TourSlotID" asp-action="/ReservationInfo" method="post">
                         <input type="hidden" asp-for="@x.TourSlotID" />
@@ -84,7 +84,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                     <form id="@x.TourSlotID" asp-action="/ReservationInfo" method="post">
                         <input type="hidden" asp-for="@x.TourSlotID" />
@@ -107,7 +107,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                     <form id="@x.TourSlotID" asp-action="/ReservationInfo" method="post">
                         <input type="hidden" asp-for="@x.TourSlotID" />
@@ -130,7 +130,7 @@
             {
                 <div>
                     <p>
-                        @x.TimeInfo
+                        @x.TimeInfo.Hour.ToString():00
                     </p>
                         <form id="@x.TourSlotID" asp-action="/ReservationInfo" method="post">
                             <input type="hidden" asp-for="@x.TourSlotID" />
