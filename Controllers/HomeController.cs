@@ -58,9 +58,14 @@ namespace TempleTours.Controllers
         public IActionResult SignUp(TourSlot tourslot)
         {
             TourSlot slot = tourslot;
+            //TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == tourslotID);
             // Update the slot to be available = false
             // Set ViewData = slot
-            return RedirectToAction("ReservationInfo", slot);
+            //ViewData["tourslot"] = slot;
+            return View("ReservationInfo", new ReservationFormViewModel
+            {
+                Tour = slot
+            }) ;
         }
 
 
@@ -72,13 +77,13 @@ namespace TempleTours.Controllers
 
         //Sign Up POST Action 
         [HttpPost("ReservationInfo")]
-        public IActionResult ReservationInfo(TourSlot tourSlot)
+        public IActionResult ReservationInfo(Reservation reservation)
         {
             //model validation
             if (ModelState.IsValid)
             {
                 //update DB & redirect to View Appointments
-                Context.TourSlots.Add(tourSlot);
+                Context.Reservations.Add(reservation);
                 Context.SaveChanges();
                 return View("ViewAppointments");
             }
