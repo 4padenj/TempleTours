@@ -62,7 +62,10 @@ namespace TempleTours.Controllers
             savedTime = tourslot.TimeInfo;
             ViewBag.Time = savedTime;
 
-            TourSlot slot = Context.TourSlots.First(x => x.TourSlotID == savedID);
+            
+
+            Context.TourSlots.First(x => x.TourSlotID == savedID).Available = false;
+            Context.SaveChanges();
             // Update the slot to be available = false
             // Set ViewData = slot
             //ViewData["tourslot"] = slot;
@@ -84,10 +87,11 @@ namespace TempleTours.Controllers
             if (ModelState.IsValid)
             {
                 //update DB & redirect to View Appointments
+                
                 Context.Reservations.Add(reservation);
                 Context.SaveChanges();
                 Console.WriteLine(savedID);
-                return View("ViewAppointments");
+                return View("Index");
             }
             else
             {
@@ -102,25 +106,25 @@ namespace TempleTours.Controllers
         public IActionResult ViewAppointments()
         {
             //pass in reservations
-            return View(new DayOfWeekViewModel
+            return View(new ViewAppointmentsViewModel
             {
-                Monday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 22 && x.Available == false).OrderBy(x => x.TimeInfo),
+                Monday = Context.Reservations
+                     .Where(x => x.Time.Day == 22).OrderBy(x => x.Time),
 
-                Tuesday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 23 && x.Available == false).OrderBy(x => x.TimeInfo),
+                Tuesday = Context.Reservations
+                     .Where(x => x.Time.Day == 23).OrderBy(x => x.Time),
 
-                Wednesday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 24 && x.Available == false).OrderBy(x => x.TimeInfo),
+                Wednesday = Context.Reservations
+                     .Where(x => x.Time.Day == 24).OrderBy(x => x.Time),
 
-                Thursday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 25 && x.Available == false).OrderBy(x => x.TimeInfo),
+                Thursday = Context.Reservations
+                     .Where(x => x.Time.Day == 25).OrderBy(x => x.Time),
 
-                Friday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 26 && x.Available == false).OrderBy(x => x.TimeInfo),
+                Friday = Context.Reservations
+                     .Where(x => x.Time.Day == 26).OrderBy(x => x.Time),
 
-                Saturday = Context.TourSlots
-                     .Where(x => x.TimeInfo.Day == 27 && x.Available == false).OrderBy(x => x.TimeInfo)
+                Saturday = Context.Reservations
+                     .Where(x => x.Time.Day == 27).OrderBy(x => x.Time)
 
             });
         }

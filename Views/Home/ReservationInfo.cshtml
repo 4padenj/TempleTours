@@ -6,8 +6,8 @@
 @model Reservation
 
 
-<div>
-    <form asp-action="ReservationInfo" method="post">
+<div class="form-group">
+    <form asp-action="ReservationInfo" method="post" class="form-group">
         <label asp-for="GroupName">Group Name:</label>
         <input asp-for="GroupName" />
         <br />
@@ -25,7 +25,7 @@
 
         <input type="hidden" asp-for="Time" value="@ViewBag.Time"/>
 
-        <button type="submit">Book Appointment</button>
+        <button type="submit" class="btn btn-primary">Book Appointment</button>
 
     </form>
     <div asp-validation-summary="All"></div>
