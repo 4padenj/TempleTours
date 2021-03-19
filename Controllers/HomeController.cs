@@ -98,6 +98,7 @@ namespace TempleTours.Controllers
 
 
         //View Appointments Action
+        [HttpGet("Appointments")]
         public IActionResult ViewAppointments()
         {
             //pass in reservations
